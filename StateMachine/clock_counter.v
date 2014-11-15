@@ -6,12 +6,11 @@ module clock_counter(
 	
 	output reg clk_o
 	);
-		
-	OSCH #("2.08") osc_int (					//"2.08" specifies the operating frequency, 2.08 MHz. Other clock frequencies can be found in the MachX02's documentation
-		.STDBY(1'b0),							//Specifies active state
-		.OSC(clk),								//Outputs clock signal to 'clk' net
-		.SEDSTDBY());							//Leaves SEDSTDBY pin unconnected
-		
+
+	OSCH #("2.08") osc_int (    
+                .STDBY(1'b0),	 
+		.OSC(clk),							
+		.SEDSTDBY());									
 		
 	
 	reg [21:0] count;

@@ -3,7 +3,7 @@ module state_machine(
 	input reset_n,
 	input LeftBumper,
 	input RightBumper,
-	
+        
 	output clk_out,
 	output L_Ena,
 	output L_Dir,
@@ -32,8 +32,8 @@ module state_machine(
 		begin
 			case(state)
 				S0: if(~LeftBumper) state_n = S3;
-					else if(~RightBumper) state_n = S1;
-					else state_n = S0;
+				    else if(~RightBumper) state_n = S1;
+				    else state_n = S0;
 				S1: state_n = S2;
 				S2: state_n = S0;
 				S3: state_n = S4;

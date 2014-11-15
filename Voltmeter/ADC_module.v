@@ -1,6 +1,4 @@
 
-//ADCinterface allows for a verilog project to be interfaced with the ADC0820 breakout board from Tekbots, operating in WR-RD Standalone mode by supplying the CS, RD, and WR control signals
-//module can be modified to allow for alternate operating modes, but aren't currently written in
 module ADCinterface(
 		input reset_n,
 		input clk,			//input clock should be 2.08MHz
